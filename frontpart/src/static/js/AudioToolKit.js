@@ -3,8 +3,8 @@
  */
 
 var $DataTK=require("./utils/DataToolKit").default;
+var Wave = require("./WAVE.js");
 
-console.log($DataTK.prototype);
 
 function $Auditool(options) {
    this.options = $DataTK(OPTIONS).extend(options);
@@ -14,9 +14,12 @@ OPTIONS = {
   containner:"",
   url:"",
   backwave_color:"red",
-  progresswave_color:"gray"
+  progresswave_color:"gray",
+  BufferSize:256,
+
 }
 
+$DataTK($Auditool.prototype).extend(Wave);
 
 $Auditool.prototype.init= function (options) {
   /**
@@ -27,5 +30,7 @@ $Auditool.prototype.init= function (options) {
   // TODO 加载波形
 
 
-
 }
+
+
+module.exports = $Auditool;
