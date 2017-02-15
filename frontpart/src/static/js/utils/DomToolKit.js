@@ -1,7 +1,18 @@
 /**
  * Created by mac WuYiPing on 17/2/14.
  * 自制的DOM库
+ *
+ * @ 迭代器的理解  此处迭代器  OnOrMore
+ * 对数据的操作
+ * 单个数据 直接 执行函数 返回一个对象
+ * 对于多个数据,迭代器,将每一个数据取出来,然后将其传入函数执行
+ * 此处并没有讨论多层嵌套的数据结构,仅讨论数组
+ *
+ *
  */
+
+
+
 
 function getElement(str){
   var Ele = false;
@@ -28,10 +39,21 @@ function getElement(str){
   }
 
   if(Ele){
-    console.log(Ele);
+    // console.log(Ele);
     return Ele;
   }else {
     throw "can't find element (╯﹏╰)"
+  }
+}
+function OneOrMore(_OM,_fun) {// 迭代器? 算是吧  但是 如何 添加很多事件
+  if(_OM instanceof Array){
+    var _temArray=[];
+    _OM.forEach(function(value){
+      _temArray.push(_fun(value));
+    });
+    return _temArray;
+  }else {
+    _fun(_OM);
   }
 }
 
@@ -39,81 +61,80 @@ var $DoTk=function(str) {
    this.el=(typeof str=="string"?getElement(str):str);
 }
 
-
-
-
-
-
-
-
 $DoTk.prototype.hasClass =function(clas){
   //hasClass现在支持  一个元素 就返回一个obj 如果是一个数组就返回一个数组
 
-  if(this.el instanceof Array){
-    var _temArray=[];
-    for(var i=0,j=this.el.length;i<j;i++){
-      console.log(this.el[i]);
-      var _that=this;
-      (function(i) {
-        _temArray.push((new $DoTk(_that.el[i])).hasClass(clas));
-      })(i)
-    }
+  // if(this.el instanceof Array){
+  //   var _temArray=[];
 
-    return _temArray;
-  }else{
-    var obj = this.el;
-    var temB = {a: false, b: false};
-    if (obj.className) {
-      var Arr = obj.className.split(' ');
-    } else {
-      return temB;
-    }
-
-    //console.log(Arr);
-    for (var i in Arr) {
-      if (Arr[i] == clas) {
-        temB.a = true;
-        temB.b = i;
+    return OneOrMore(this.el,function (value) {
+      var obj = value,
+          temB = {a: false, b: false};
+      if (obj.className) {
+        var Arr = obj.className.split(' ');
+      } else {
+        return temB;
       }
+
+      // console.log(Arr);
+      for (var i in Arr) {
+        if (Arr[i] == clas) {
+          temB.a = true;
+          temB.b = i;
+        }
+      }
+      return temB;
+    });
+}
+
+$DoTk.prototype.toogleClass = function (clas) {
+  var _self = this;
+  //TODO 在这里添加 toogle calss  有两种情况  一个是单clas 还有一个是双clas
+  // TODO 需要考虑的是 双cals时 是否可以调换顺序呢?
+  return OneOrMore(this.el,function (value) {
+    var temB = {};
+    if (typeof clas == "string") {
+      temB = _self.hasClass(value, clas);
+      var Arr = value.className.split(' ');
+      if (temB.a) {
+        Arr.splice(temB.b, 1);
+      } else {
+        Arr.push(clas);
+      }
+
+      value.className = Arr.join(' ');
+    }else {
+
+      temB = _self.hasClass(value, clas[0]);
+      var Arr = value.className.split(' ');
+      if (temB.a) {
+        Arr.splice(temB.b, 1);
+        Arr.push(clas[1]);
+      } else {
+        temB = _self.hasClass(value, clas[1]);
+        Arr.splice(temB.b, 1);
+        Arr.push(clas[0]);
+      }
+
+      value.className = Arr.join(' ');
+
     }
-    return temB;
-  }
+  })
+
+
+  return this.el;
+
+
 }
 
 
+function $DomTK(str) {
+  return (new $DoTk(str));
+}
+
+// TODO 没必要 像jQ一样大而全,自己写一个将就用,我觉得做迭代器就有点过了。。。
 
 
-
-
-//
-// {
-//   hasClass: function hasClass(obj, clas) {
-//     var temB = {a: false, b: false};
-//     if (obj.className) {
-//       var Arr = obj.className.split(' ');
-//     } else {
-//       return temB;
-//     }
-//
-//     //console.log(Arr);
-//     for (var i in Arr) {
-//       if (Arr[i] == clas) {
-//         temB.a = true;
-//         temB.b = i;
-//       }
-//     }
-//     return temB;
-//   },
-//
-//   makeItArray: function makeItArray(obj) {
-//     var temArray = [];
-//     var l = obj.length;
-//     for (var i = 0; i < l; i++) {
-//       temArray.push(obj[i]);
-//     }
-//
-//     return temArray;
-//   },
 //   toggleClass: function toggleClass(obj, clas) {
 //     var temB={};
 //     if(typeof clas=="string"){
@@ -194,4 +215,4 @@ $DoTk.prototype.hasClass =function(clas){
 // }
 //
 //
-// module.exports = DomControl;
+// module.exports = $DomTK;

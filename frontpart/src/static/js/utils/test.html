@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
   <script src="DomToolKit.js"></script>
+  <style>
+    div {
+      display: inline-block;
+      width:100px;
+      height:100px;
+      background: blue;
+    }
+  </style>
 </head>
 <body>
 <div class="haha"></div>
@@ -30,8 +38,10 @@
 <div></div>
 <div></div>
 <script>
-  var a =new $DoTk('.haha');
-  console.log(a.hasClass('aa'));
+  var a = $DomTK('.haha');
+  a.toogleClass(["aa","a"]);
+  console.log(a.hasClass('a'));
+
 
 
 </script>

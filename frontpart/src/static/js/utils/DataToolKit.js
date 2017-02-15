@@ -20,7 +20,24 @@ $DTK.prototype.OneOf = function (who) {
 }
 
 
+$DTK.prototype.extend = function (value) {
+  // 就别考虑出错。。。  我自己的用的 。。口那要那么多易用性 !!!!!!
+  if(value instanceof Object){
+    for(var i in value){
+      this.value[i] = value[i]
+    }
+
+    return this.value;
+  }else{
+    throw "我靠。。。不是对象 你extend毛线啊!!!!"
+  }
 
 
+}
 
-exports.default=$DTK;
+
+function $DataTK(value) {
+  return (new $DTK(value))
+}
+
+exports.default=$DataTK;

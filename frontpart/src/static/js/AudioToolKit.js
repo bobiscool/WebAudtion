@@ -2,25 +2,30 @@
  * Created by mac WuYiPing on 17/2/14.
  */
 
-var $DTK=require("./utils/DataToolKit").default;
+var $DataTK=require("./utils/DataToolKit").default;
 
-console.log($DTK.prototype);
+console.log($DataTK.prototype);
 
-function $WAVE() {
-
+function $Auditool(options) {
+   this.options = $DataTK(OPTIONS).extend(options);
 }
 
 OPTIONS = {
   containner:"",
   url:"",
-  wave_color:"red",
-  progress_color:"gray"
+  backwave_color:"red",
+  progresswave_color:"gray"
 }
 
 
-$WAVE.prototype.init= function (options) {
-   //预加载 buffer
-  //创建画板
+$Auditool.prototype.init= function (options) {
+  /**
+   *首先是加载数据文件,我只做webaudio加载,不做mediaElement加载
+   * 那么这里的波形文件 到底是不是 buffer
+   */
+   //TODO 创建画板
+  // TODO 加载波形
+
 
 
 }
