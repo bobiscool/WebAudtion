@@ -10,7 +10,13 @@ var OPTIONS={
   PAUSED_STATE:1,
   FINISHED_STATE:2
   }
-var Wave = {
+var Wave = function(){
+  this.url = OPTIONS.url
+}
+
+
+Wave.prototype = {
+
   haveAudioapi:function () {
     return !!(window.AudioContext||window.webkitAudioContext)
   },
@@ -21,8 +27,9 @@ var Wave = {
 
     return this.ac
   }
+
+
 }
-$DataTool($Auditool.prototype).extend(Wave);
 
 module.exports = Wave;
 

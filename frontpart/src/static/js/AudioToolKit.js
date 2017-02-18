@@ -4,7 +4,7 @@
 
 var $DataTK=require("./utils/DataToolKit").default;
 var Wave = require("./WAVE.js");
-
+var Loader = require("./BufferLoader");
 
 function $Auditool(options) {
    this.options = $DataTK(OPTIONS).extend(options);
@@ -19,8 +19,6 @@ OPTIONS = {
 
 }
 
-$DataTK($Auditool.prototype).extend(Wave);
-
 $Auditool.prototype.init= function (options) {
   /**
    *首先是加载数据文件,我只做webaudio加载,不做mediaElement加载
@@ -28,6 +26,8 @@ $Auditool.prototype.init= function (options) {
    */
    //TODO 创建画板
   // TODO 加载波形
+
+
 
 
 }
