@@ -9,6 +9,8 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "element-ui": "^1.2.1",
+    "muse-ui": "^2.0.0-rc.5",
     "vue": "^2.1.0",
     "zrenderjs": "^3.0.3"
   },

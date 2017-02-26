@@ -1,19 +1,20 @@
 <template>
-  <div id="app">
-    <WaveForm></WaveForm>
-  </div>
+<router-view></router-view>
 </template>
 
-<script>
-import WaveForm from './components/home/waveform.vue'
-
-
-export default {
-  name: 'app',
-  components: {
-    WaveForm
+<script type="text/ecmascript-6">
+  export default {
+    name: 'app',
+    data() {
+      return {
+      };
+    },
+    methods: {
+    },
+    mounted:function () {
+    }
   }
-}
+
 </script>
 
 <style>
