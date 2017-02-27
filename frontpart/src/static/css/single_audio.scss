@@ -1,0 +1,21 @@
+//by wyp :)
+
+@import "mixin";
+.single {
+  @include AHM(1000px,500px,250px)
+  background: #00A14B;
+
+  #waveform {
+    position:absolute;
+    top:0;
+    width:100%;
+    height: 100px;
+  }
+  .button-area {
+
+    width:100%;
+    height: 50px;
+    position: absolute;
+    bottom: 00px;
+  }
+}

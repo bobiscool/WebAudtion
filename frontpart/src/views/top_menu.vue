@@ -4,14 +4,21 @@
       <el-menu theme="dark"
                class="el-menu-demo"
                mode="horizontal"
+               :router="router"
       >
-        <el-menu-item index="1" ><router-link to="/">单音</router-link></el-menu-item>
+        <el-menu-item index="/"
+                      :router="router"
+        >单音</el-menu-item>
 
 
-          <el-menu-item index="2" ><router-link to="/multi">多轨</router-link></el-menu-item>
+          <el-menu-item index="/multi"
+                        :router="router"
+          >多轨</el-menu-item>
 
 
-        <el-menu-item index="3"><router-link to="/manageApp">混音</router-link></el-menu-item>
+        <el-menu-item index="/mix"
+                      :router="router"
+        >混音</el-menu-item>
       </el-menu>
 
       <router-view></router-view>
@@ -23,6 +30,8 @@
     export default{
         data(){
             return{
+
+              router:true
 
             }
         },

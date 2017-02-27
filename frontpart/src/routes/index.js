@@ -17,8 +17,8 @@ const routers = [{
     },
 
     {
-      path: '/manageApp',
-      component:require('../views/multi_audio.vue')
+      path: '/mix',
+      component:require('../views/mix_audio.vue')
     },
 
     {
