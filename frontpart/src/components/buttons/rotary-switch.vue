@@ -20,40 +20,60 @@
     export default{
         data(){
             return{
-                now:0.5,
-              needTo:0
+                now:0,
+              old:0,
+              needTo:0,
+              oriX:0,
+              ogiY:0
             }
         },
-        components:{
+      watch:{
+        now:function (val) {
+          var _self=this;
+          if(val>0.28231415){
+//            console.log("大于0.28");
+            _self.$refs.active.className="rotary-switch-pathway-active active";
+          }else if(val>-.55&&val<=0.28231415){
+            _self.$refs.active.className="rotary-switch-pathway-active activeLess";
+          }else {
+            _self.$refs.active.className="rotary-switch-pathway-active activeLesser";
+          }
+        }
+
+      },components:{
 
         },
       mounted:function () {
         var _self = this;
-
+       _self.resetOri();
         this.$refs.RoButton.addEventListener("mousedown",function () {
           document.addEventListener("mousemove",_self.mouseMove)
         });
 
-        this.$refs.RoButton.style.transform="rotate("+(-160+250*_self.now)+"deg)";
+        _self.$refs.active.style.transform="rotate(-42deg)";
+        _self.$refs.active.className="rotary-switch-pathway-active activeLess";
+        _self.$refs.RoButton.style.transform="rotate("+(-36+125*_self.now)+"deg)";
         document.addEventListener("click",_self.mouseClick)
       },
       methods:{
+        resetOri:function () {
+          var _self = this;
+          _self.oriX=_self.$refs.RoButton.getBoundingClientRect().left+_self.$refs.RoButton.offsetWidth/2;
+          _self.oriY=_self.$refs.RoButton.getBoundingClientRect().top+_self.$refs.RoButton.offsetWidth/2;
+        },
         mouseUp:function () {
           var _self=this;
           document.removeEventListener("mouseup",_self.mouseUp);
           document.removeEventListener("mousemove",_self.mouseMove);
-          console.log("删除事件")
+          _self.old=_self.now;
         },
         mouseMove:function (e) {
-          console.log("down");
+//          console.log("down");
           var _self=this;
-//          console.log(e.clientX);
-//          console.log(e.clientY);
-         _self.needTo=_self.calculValue(e.clientX,e.clientY,1000);
-          console.log("needTo"+_self.needTo);
-          console.log("now"+_self.now);
+          _self.needTo=_self.calculValue(e.clientX,e.clientY,1000);
+//          console.log("needTo"+_self.needTo);
           _self.go();
-          document.addEventListener("mouseup",_self.mouseUp)
+          document.addEventListener("mouseup",_self.mouseUp);
 
           e.preventDefault();
         },
@@ -63,22 +83,26 @@
         },
         calculValue:function (x,y,max) {
           var _self =this;
-          var oriX=_self.$refs.RoButton.getBoundingClientRect().left+_self.$refs.RoButton.offsetWidth/2;
-          var oriY=_self.$refs.RoButton.getBoundingClientRect().top+_self.$refs.RoButton.offsetHeight/2;
+          var oriX=_self.oriX;
+          var oriY=_self.oriY;
 //          console.log(oriX+"+"+oriY);
-          var _who = Math.abs(x-oriX)>Math.abs(y-oriY)?(x-oriX):(oriY-y);
+//          console.log("x-oriX",(x-oriX));
+//          console.log("Y-oriy",(y-oriY));
+          var _who = (x-oriX);
           return Math.abs(_who/max)>1?Math.abs(_who/max)/(_who/max):(_who/max);
         },
         go:function () {
           var _self = this;
-          if(_self.needTo>0){
-            _self.now=_self.now+(1-_self.now)*_self.needTo;
-          }else{
-            _self.now=_self.now+_self.now*_self.needTo;
+          if(_self.needTo>0) {
+            _self.now = _self.old + _self.needTo* (1-_self.old)
+          }else {
+//            console.log("小于零");
+//            _self.now = _self.old + _self.needTo* (1-_self.old)
+            _self.now=(_self.old+1)*(1+_self.needTo)-1;
           }
+            _self.$refs.RoButton.style.transform="rotate("+(-36+125*_self.now)+"deg)";
 
-          console.log((-160+250*_self.now));
-          _self.$refs.RoButton.style.transform="rotate("+(-160+250*_self.now)+"deg)";
+          _self.$refs.active.style.transform="rotate("+(-42+125*_self.now)+"deg)";
         }
       }
     }
@@ -107,10 +131,28 @@
     left:0px;
     width:126px;
     height:126px;
-    background: url("./button-img/active.png");
+    /*transform: rotate(-45deg);*/
+    /*background: url("./button-img/active.png");*/
+    -webkit-transition: transfrom 100ms;
+    -moz-transition: transfrom 100ms;
+    -ms-transition: transfrom 100ms;
+    -o-transition: transfrom 100ms;
+    transition: transfrom 100ms;
   }
 
 
+  .active {
+    background: url("./button-img/active.png");
+  }
+
+  .activeLess {
+    background: url("./button-img/activeLess.png");
+
+  }
+
+  .activeLesser {
+    background: url("./button-img/activeLesser.png");
+  }
   }
 
    .rotary-switch {
@@ -123,5 +165,14 @@
      /*transform: rotate(-160deg);*/
      /*transform: rotate(90deg);*/
      background: url("./button-img/rotary-button80.png");
+     -webkit-transition: transfrom 100ms;
+     -moz-transition: transfrom 100ms;
+     -ms-transition: transfrom 100ms;
+     -o-transition: transfrom 100ms;
+     transition: transfrom 100ms;
    }
+
+
+
+
 </style>
