@@ -2395,4 +2395,4 @@ WaveSurfer.PeakCache = {
   }
 }());
 
-export default WaveSurfer;
+module.exports=WaveSurfer;

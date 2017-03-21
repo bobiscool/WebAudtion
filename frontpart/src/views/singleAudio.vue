@@ -19,7 +19,7 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import WAV from "js/WAVE.js"
+  import WAV from "../../static/js/WAVE.js"
   import Ro from "components/buttons/rotary-switch.vue"
   import Rob from "components/buttons/rotary-switchB.vue"
 

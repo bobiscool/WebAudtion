@@ -1,7 +1,7 @@
 
 import Vue from 'vue'
 import App from './App'
-import './static/css/index.scss'
+import '@/css/index.scss'
 import VueRouter from 'vue-router'
 import routes from './routes/index'
 import store from './vuex/Stores'
