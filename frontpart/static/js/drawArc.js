@@ -1,6 +1,11 @@
 /**
  * Created by mac WuYiPing on 17/3/20.
+ *
+ * 以下 是我拿来 计算svg一些图形点位的 。。。  妈蛋 老是忘记 svg语法
+ *
  */
+
+
 
 var drawArc= function(angleOffset,angle,outer,inner,width) {
   var startAngle = angleOffset;

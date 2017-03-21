@@ -22,14 +22,14 @@
     <favorites_list name="frontpart" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49122807">
+    <splitter split-orientation="horizontal" split-proportion="0.7934609">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="singleAudio.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/views/singleAudio.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="275">
-                  <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+                <state relative-caret-position="317">
+                  <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
                   <folding>
                     <element signature="e#466#496#0" expanded="true" />
                   </folding>
@@ -72,8 +72,8 @@
           <file leaf-file-name="drawArc.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/static/js/drawArc.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+                <state relative-caret-position="406">
+                  <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
                   <folding />
                 </state>
               </provider>
@@ -96,7 +96,7 @@
           <file leaf-file-name="rotary-switchB.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/buttons/rotary-switchB.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="252">
+                <state relative-caret-position="588">
                   <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
                   <folding />
                 </state>
@@ -165,9 +165,9 @@
         <option value="$PROJECT_DIR$/static/js/BufferLoader.js" />
         <option value="$PROJECT_DIR$/static/js/WAVE.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
-        <option value="$PROJECT_DIR$/static/js/drawArc.js" />
         <option value="$PROJECT_DIR$/keng.md" />
         <option value="$PROJECT_DIR$/src/components/buttons/rotary-switchB.vue" />
+        <option value="$PROJECT_DIR$/static/js/drawArc.js" />
         <option value="$PROJECT_DIR$/src/views/singleAudio.vue" />
       </list>
     </option>
@@ -446,12 +446,12 @@
       <workItem from="1487747561799" duration="199000" />
       <workItem from="1487865124469" duration="6510000" />
       <workItem from="1488075148422" duration="45536000" />
-      <workItem from="1490021220763" duration="4024000" />
+      <workItem from="1490021220763" duration="6252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132578000" />
+    <option name="totallyTimeSpent" value="134806000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -466,7 +466,7 @@
     <frame x="1440" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24412297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15310428" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959184" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -863,7 +863,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/buttons/rotary-switchB.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
+        <state relative-caret-position="588">
           <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
           <folding />
         </state>
@@ -889,16 +889,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/js/drawArc.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="406">
+          <caret line="37" column="1" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/singleAudio.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+        <state relative-caret-position="317">
+          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
           <folding>
             <element signature="e#466#496#0" expanded="true" />
           </folding>

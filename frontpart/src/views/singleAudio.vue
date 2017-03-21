@@ -59,11 +59,21 @@
 
 
       var circle = new Snap("#svg");
-      circle.path(drawArc(135,270,50,40,100));
+//      circle.path(drawArc(135,270,50,40,100));
+      var _tem=0;
+      for(var i=0;i<=270;i+=15){
+        _tem=-135+i;
+        circle.circle(50,20,2).transform(("rotate("+_tem+" 50 50)"));
+      }
 
     }
   }
 </script>
 <style lang="scss">
+#svg {
 
+circle {
+    transform:rotate(318 50 50);
+  }
+}
 </style>
