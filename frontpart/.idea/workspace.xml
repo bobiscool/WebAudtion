@@ -25,11 +25,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.49122807">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="singleAudio.vue" pinned="false" current-in-tab="false">
+          <file leaf-file-name="singleAudio.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/views/singleAudio.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+                <state relative-caret-position="275">
+                  <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
                   <folding>
                     <element signature="e#466#496#0" expanded="true" />
                   </folding>
@@ -37,12 +37,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="keng.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="keng.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/keng.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="252">
-                    <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+                  <first_editor relative-caret-position="189">
+                    <caret line="7" column="98" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="98" />
                     <folding />
                   </first_editor>
                   <second_editor />
@@ -65,18 +65,6 @@
                 <state relative-caret-position="91">
                   <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="drawer.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/static/js/drawer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -108,8 +96,8 @@
           <file leaf-file-name="rotary-switchB.vue" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/components/buttons/rotary-switchB.vue">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="273">
-                  <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+                <state relative-caret-position="252">
+                  <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
@@ -178,9 +166,9 @@
         <option value="$PROJECT_DIR$/static/js/WAVE.js" />
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/static/js/drawArc.js" />
+        <option value="$PROJECT_DIR$/keng.md" />
         <option value="$PROJECT_DIR$/src/components/buttons/rotary-switchB.vue" />
         <option value="$PROJECT_DIR$/src/views/singleAudio.vue" />
-        <option value="$PROJECT_DIR$/keng.md" />
       </list>
     </option>
   </component>
@@ -458,12 +446,12 @@
       <workItem from="1487747561799" duration="199000" />
       <workItem from="1487865124469" duration="6510000" />
       <workItem from="1488075148422" duration="45536000" />
-      <workItem from="1490021220763" duration="3421000" />
+      <workItem from="1490021220763" duration="4024000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131975000" />
+    <option name="totallyTimeSpent" value="132578000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -853,10 +841,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/AudioToolKit.js">
+    <entry file="file://$PROJECT_DIR$/keng.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="189">
+            <caret line="7" column="98" selection-start-line="7" selection-start-column="98" selection-end-line="7" selection-end-column="98" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/buttons/rotary-switchB.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="70" column="26" selection-start-line="70" selection-start-column="26" selection-end-line="70" selection-end-column="26" />
           <folding />
         </state>
       </provider>
@@ -871,10 +879,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/buttons/rotary-switchB.vue">
+    <entry file="file://$PROJECT_DIR$/static/js/AudioToolKit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="71" column="18" selection-start-line="71" selection-start-column="18" selection-end-line="71" selection-end-column="18" />
+        <state relative-caret-position="91">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -889,31 +897,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/singleAudio.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+        <state relative-caret-position="275">
+          <caret line="61" column="42" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
           <folding>
             <element signature="e#466#496#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/keng.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="252">
-            <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="0">
-            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>

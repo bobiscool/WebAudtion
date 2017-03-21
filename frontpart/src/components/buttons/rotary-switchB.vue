@@ -30,7 +30,6 @@
 
 <script type="text/ecmascript-6">
 import drawArc from "js/drawArc";
-console.log(drawArc);
 
   export default{
     data(){

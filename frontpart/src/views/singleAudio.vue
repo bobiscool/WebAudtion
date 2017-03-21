@@ -26,7 +26,8 @@
   import WAV from "@/js/WAVE.js"
   import Ro from "components/buttons/rotary-switch.vue"
   import Rob from "components/buttons/rotary-switchB.vue"
-  var Snap = require( "imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js" )
+  var Snap = require( "imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js" );
+  import drawArc from "js/drawArc";
 
   console.log(Snap);
   export default{
@@ -55,6 +56,10 @@
       });
       this.audio.load('http://7o50ww.com1.z0.glb.clouddn.com/1.mp3');
       console.log(this.audio);
+
+
+      var circle = new Snap("#svg");
+      circle.path(drawArc(135,270,50,40,100));
 
     }
   }
