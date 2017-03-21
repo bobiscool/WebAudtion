@@ -7,6 +7,7 @@
         <el-button type="primary" icon="edit"></el-button>
         <el-button type="primary" icon="edit" @click="play"></el-button>
         <Ro></Ro>
+        <Rob></Rob>
 
 
       </div>
@@ -20,6 +21,7 @@
 <script type="text/ecmascript-6">
   import WAV from "js/WAVE.js"
   import Ro from "components/buttons/rotary-switch.vue"
+  import Rob from "components/buttons/rotary-switchB.vue"
 
 
 
@@ -32,7 +34,8 @@
       }
     },
     components: {
-      Ro
+      Ro,
+      Rob
 
     },
     methods: {

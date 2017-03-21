@@ -1,0 +1,25 @@
+//by wyp :)
+
+@import "mixin";
+.single {
+  @include AHM(1000px,500px,250px)
+ border: 10px solid #1A1A1C;
+  background: #1A1A1C;
+  border-radius:10px;
+
+  #waveform {
+    position:absolute;
+    top:0;
+    width:100%;
+    height: 250px;
+    background: whitesmoke;
+    border-radius:10px;
+  }
+  .button-area {
+    background: url("../img/bg.png") no-repeat;
+    width:100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0px;
+  }
+}

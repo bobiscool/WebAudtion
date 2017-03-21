@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="DomToolKit.js"></script>
+  <style>
+    div {
+      display: inline-block;
+      width:100px;
+      height:100px;
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+<div class="haha"></div>
+<div class="haha aa"></div>
+<div class="haha aa"></div>
+<div class="haha"></div>
+<div class="haha qaa"></div>
+<div class="haha"></div>
+<div class="haha aa"></div>
+<div class="haha"></div>
+<div class="haha"></div>
+<div class="haha aa"></div>
+<div class="haha"></div>
+<div class="haha aa"></div>
+<div class="haha"></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<script>
+  var a = $DomTK('.haha');
+  a.toogleClass(["aa","a"]);
+  console.log(a.hasClass('a'));
+
+
+
+</script>
+</body>
+</html>
