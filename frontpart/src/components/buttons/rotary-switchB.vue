@@ -29,6 +29,8 @@
 </template>
 
 <script type="text/ecmascript-6">
+import drawArc from "js/drawArc";
+console.log(drawArc);
 
   export default{
     data(){
@@ -67,6 +69,8 @@
       _self.$refs.active.className="rotary-switch-pathway-active activeLess";
       _self.$refs.RoButton.style.transform="rotate("+(-36+125*_self.now)+"deg)";
       document.addEventListener("click",_self.mouseClick)
+      console.log(drawArc(270,180,100,90,100));
+
     },
     methods:{
       resetOri:function () {
