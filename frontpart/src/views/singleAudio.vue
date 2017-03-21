@@ -26,9 +26,9 @@
   import WAV from "@/js/WAVE.js"
   import Ro from "components/buttons/rotary-switch.vue"
   import Rob from "components/buttons/rotary-switchB.vue"
-  import snapsvg from "snapsvg"
+  var Snap = require( "imports-loader?this=>window,fix=>module.exports=0!snapsvg/dist/snap.svg.js" )
 
-  console.log(snapsvg);
+  console.log(Snap);
   export default{
     data(){
       return {

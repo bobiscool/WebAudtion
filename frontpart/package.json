@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "element-ui": "^1.2.1",
+    "imports-loader": "^0.7.1",
     "muse-ui": "^2.0.0-rc.5",
     "snapsvg": "^0.5.1",
     "vue": "^2.1.0",
